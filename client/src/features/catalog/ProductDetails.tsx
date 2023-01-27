@@ -60,12 +60,8 @@ export default function ProductDetails() {
   };
 
   const handleUpdateCart = () => {
-    console.log("handleUpdateCart clicked");
     if (!item || quantity > item.quantity) {
       const updatedQuantity = item ? quantity - item.quantity : quantity;
-      console.log("quantity", quantity);
-      console.log("item.quantity", item?.quantity);
-      console.log("updatedQuantity1", updatedQuantity);
       dispatch(
         addBasketItemAsync({
           productId: product?.id!,
